@@ -1,4 +1,6 @@
-@import '../mixins/_content-item';
+@import '../modules/_content-item';
+@import '../mixins/_media';
+
 .main__content {
   height: 100vh;
   padding: 24px 16px;

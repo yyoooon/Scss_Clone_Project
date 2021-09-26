@@ -373,8 +373,8 @@ ol {
 }
 @media all and (max-width: 500px) {
   .content-item {
-    width: 99%;
-    background-color: darkmagenta;
+    width: 72%;
+    margin: 0 auto 40px;
   }
 }
 .content-item a {

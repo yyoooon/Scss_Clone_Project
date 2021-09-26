@@ -1,5 +1,5 @@
 @import '../variables/_color';
-@import '../mixins/tag';
+@import '../modules/tag';
 @import '../mixins/_media';
 
 $fillter-bar-height: 56px;
@@ -10,6 +10,7 @@ $fillter-bar-height: 56px;
   &::-webkit-scrollbar {
     display: none;
   }
+
   border-top: 1px solid $--yt-spec-10-percent-layer;
   border-bottom: 1px solid $--yt-spec-10-percent-layer;
 

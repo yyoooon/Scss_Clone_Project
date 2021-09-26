@@ -13,8 +13,8 @@
     width: 49%;
   }
   @include media(col_1) {
-    width: 99%;
-    background-color: darkmagenta;
+    width: 72%;
+    margin: 0 auto 40px;
   }
 
   a {

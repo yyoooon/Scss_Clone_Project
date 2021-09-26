@@ -1,0 +1,6 @@
+@mixin circle-button {
+  border-radius: 50%;
+  &:active {
+    background-color: $--ytd-searchbox-legacy-button-focus-color;
+  }
+}

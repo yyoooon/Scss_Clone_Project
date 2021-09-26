@@ -1,0 +1,96 @@
+@import '../mixins/_typo';
+@import '../mixins/_icon';
+@import '../variables/_color';
+@import '../mixins/_media';
+
+$item-height: 40px;
+
+.nav-mini {
+  display: none;
+  width: 72px;
+  @include media(col_4) {
+    display: block;
+  }
+  @include media(col_2) {
+    display: none;
+  }
+  &__list {
+    margin-top: 4px;
+  }
+  &__item {
+    @include nav-mini-text;
+    &:hover {
+      background-color: $--ytd-searchbox-legacy-button-hover-color;
+    }
+    &:active {
+      background-color: $--yt-spec-grey-2;
+    }
+
+    .icon {
+      @include icon;
+      margin-bottom: 6px;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 74px;
+      padding: 16px 0 14px 0;
+    }
+  }
+}
+
+.nav-wide {
+  display: block;
+  width: 240px;
+  padding: 12px 0;
+  @include media(col_4) {
+    display: none;
+  }
+
+  &__section:nth-child(2),
+  &__section:nth-child(3) {
+    border-top: 1px solid $--yt-spec-10-percent-layer;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  &__item {
+    @include nav-text;
+    font-weight: 400;
+    &:hover {
+      background-color: $--ytd-searchbox-legacy-button-hover-color;
+    }
+    &:active {
+      background-color: $--yt-spec-grey-2;
+      font-weight: 500;
+    }
+    &--focus {
+      background-color: $--yt-spec-10-percent-layer;
+      &:hover {
+        background-color: $--yt-spec-10-percent-layer;
+      }
+      &:active {
+        background-color: $--yt-spec-grey-2;
+      }
+    }
+
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      height: $item-height;
+      padding: 0 24px;
+    }
+    button {
+      width: 100%;
+      @include nav-text;
+    }
+
+    .icon {
+      @include icon;
+      margin-right: 24px;
+    }
+  }
+}

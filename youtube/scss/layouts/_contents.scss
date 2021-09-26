@@ -1,0 +1,11 @@
+@import '../mixins/_content-item';
+.main__content {
+  height: 100vh;
+  padding: 24px 16px;
+  margin: 0 auto;
+  background-color: $--yt-spec-general-background-a;
+  .contents {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

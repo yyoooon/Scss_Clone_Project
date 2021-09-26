@@ -1,0 +1,15 @@
+@use 'sass:map'; // map을 쓰기위한 규칙을 적어줘야 함
+
+@mixin media($name) {
+  // 인자로 들어갈 변수를 여기에서 선언해줌
+  $breakpoint: (
+    col_1: 500px,
+    col_2: 871px,
+    col_3: 1126px,
+    col_4: 1313px,
+  );
+
+  @media all and (max-width: map.get($breakpoint, $name)) {
+    @content;
+  }
+}

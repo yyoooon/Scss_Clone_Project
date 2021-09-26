@@ -1,0 +1,6 @@
+@mixin icon {
+  $icon-size: 24px;
+  display: block;
+  width: $icon-size;
+  height: $icon-size;
+}

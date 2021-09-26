@@ -1,0 +1,31 @@
+@import '../variables/_color';
+@import '../mixins/tag';
+@import '../mixins/_media';
+
+$fillter-bar-height: 56px;
+
+.content-filter-bar {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  border-top: 1px solid $--yt-spec-10-percent-layer;
+  border-bottom: 1px solid $--yt-spec-10-percent-layer;
+
+  &__list {
+    display: flex;
+    width: 10px;
+    height: $fillter-bar-height;
+    padding-left: 24px;
+  }
+
+  &__item {
+    margin: 12px;
+    margin-left: 0;
+  }
+
+  .keyword-tag {
+    @include keyword-tag;
+  }
+}

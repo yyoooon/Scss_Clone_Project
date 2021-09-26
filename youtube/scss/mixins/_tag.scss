@@ -1,0 +1,28 @@
+@import '../variables/_color';
+@import '../mixins/_typo';
+
+@mixin keyword-tag {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 1px solid $--yt-spec-10-percent-layer;
+  background-color: $--yt-spec-badge-chip-background;
+  @include tag-text;
+  &:hover {
+    background-color: $--yt-spec-button-chip-background-hover;
+  }
+  &--focus {
+    background-color: $--yt-spec-text-primary;
+    color: $--yt-spec-text-primary-inverse;
+    &:hover {
+      background-color: $--yt-spec-text-primary;
+    }
+  }
+  h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

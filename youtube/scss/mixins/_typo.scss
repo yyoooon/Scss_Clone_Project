@@ -1,0 +1,44 @@
+@import '../variables/_color';
+
+@mixin nav-text {
+  font-family: ' Roboto ', ' Noto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $--yt-spec-text-primary;
+}
+
+@mixin nav-mini-text {
+  font-family: ' Roboto ', ' Arial', sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $--yt-spec-text-primary;
+}
+
+@mixin tag-text {
+  font-family: ' Roboto ', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  color: $--yt-spec-text-primary;
+}
+
+@mixin content-title {
+  font-family: ' Roboto ', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  font-weight: 700;
+  color: $--yt-spec-text-primary;
+}
+
+@mixin content-text {
+  font-family: ' Roboto ', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  color: $--yt-spec-text-secondary;
+}

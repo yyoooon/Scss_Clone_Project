@@ -1,0 +1,157 @@
+@import '../variables/_color';
+@import '../mixins/_icon';
+@import '../mixins/_button';
+@import '../mixins/_media';
+
+$header-block-height: 56px;
+$element-size: 40px;
+$icon-size: 24px;
+
+.ytb-header {
+  display: flex;
+  justify-content: space-between;
+  height: $header-block-height;
+  padding: 0 15px;
+
+  .icon {
+    @include icon;
+  }
+
+  // ------------------------------------
+
+  &__start {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: 169px;
+
+    .menu-toggle {
+      width: $element-size;
+      height: $element-size;
+      padding: 8px;
+      @include circle-button;
+    }
+
+    .logo {
+      a {
+        display: block;
+        width: 120px;
+        padding: 18px 14px 18px 16px;
+      }
+    }
+  }
+
+  // ------------------------------------
+
+  &__center {
+    width: 728px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .search-form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-left: 40px; // 마진으로 채우지 않으면 줄어들게된다
+      height: $element-size;
+      border: 1px solid $--ytd-searchbox-legacy-border-color;
+      @include media(col_2) {
+        display: none;
+      }
+
+      &__input-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: $icon-size;
+        padding: 2px 6px;
+      }
+      &__input {
+        width: 100%;
+        color: $--ytd-searchbox-text-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      &__keyboard {
+        width: 27px;
+        padding: 0 4px;
+      }
+
+      &__search-button {
+        width: 64px;
+        height: 100%;
+        padding: 1px 6px;
+        border-left: 1px solid $--ytd-searchbox-legacy-border-color;
+        background-color: $--ytd-searchbox-legacy-button-color;
+        .icon {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .search-button {
+      display: none;
+      width: $element-size;
+      height: $element-size;
+      .icon {
+        margin: 0 auto;
+      }
+      @include media(col_2) {
+        display: block;
+      }
+    }
+
+    .voice-button {
+      width: $element-size;
+      height: $element-size;
+      margin-left: 10px;
+      background-color: $--ytd-searchbox-legacy-button-color;
+      .icon {
+        margin: 0 auto;
+      }
+      @include circle-button;
+      @include media(col_2) {
+        background-color: inherit;
+      }
+    }
+  }
+
+  // ------------------------------------
+
+  &__end {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    width: 225px;
+    @include media(col_2) {
+      width: 180px;
+    }
+
+    .personal-utils {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &__button {
+        width: $element-size;
+        height: $element-size;
+        padding: 8px;
+        margin-right: 8px;
+        @include media(col_2) {
+          margin-right: 0;
+        }
+        @include circle-button;
+      }
+      .profile__button {
+        width: 60px;
+        height: $element-size;
+        padding: 1px 6px;
+        .profile__img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

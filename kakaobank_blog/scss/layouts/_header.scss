@@ -1,0 +1,128 @@
+@import '../mixins/_typo';
+@import '../variables/_color';
+@import '../mixins/_media';
+
+.kb-header {
+  padding: 15px 0;
+  @include media(md) {
+    padding: 25px 0;
+  }
+  a {
+    display: block;
+  }
+
+  &__inner {
+    display: flex;
+    max-width: 1180px;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin: 0 auto;
+    @include media(md) {
+      align-items: center;
+    }
+
+    .kb-logo {
+      flex-shrink: 0;
+      margin-top: 37px;
+      @include media(md) {
+        margin-top: 0;
+      }
+      img {
+        width: 262px;
+        height: 34px;
+        vertical-align: top;
+        @include media(md) {
+          width: 150px;
+          height: 20px;
+        }
+      }
+    }
+
+    .menu-btn {
+      display: none;
+      @include media(md) {
+        order: -1;
+        display: block;
+        width: 22px;
+        height: 28px;
+      }
+      .bar {
+        width: 22px;
+        height: 2px;
+        background: #1e1e1e;
+        display: block;
+        margin: 0 auto;
+        &.center {
+          margin: 5px auto;
+        }
+      }
+    }
+
+    .kb-nav {
+      width: 625px;
+      @include media(md) {
+        width: 22px;
+        height: 28px;
+      }
+      @include nav-text;
+      color: $text-primary;
+      .link-icons {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        @include media(md) {
+          display: none;
+        }
+
+        a {
+          width: 21px;
+          height: 20px;
+          margin-left: 10px;
+          background: url(https://tistory3.daumcdn.net/tistory/2744754/skin/images/icon_item.png)
+            no-repeat;
+          background-size: 500px 500px;
+
+          &:nth-child(1) {
+            margin-left: 0;
+            background-position: -32px 0;
+          }
+          &:nth-child(2) {
+            background-position: -65px 0;
+          }
+          &:nth-child(3) {
+            background-position: -98px 0;
+          }
+        }
+      }
+
+      &__bottom-box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        @include media(md) {
+          margin-top: 0;
+        }
+        .menu {
+          display: flex;
+          width: 590px;
+          @include media(md) {
+            display: none;
+          }
+          &__item {
+            padding-bottom: 20px;
+            margin-right: 35px;
+          }
+        }
+        .search-btn {
+          display: inline;
+          width: 22px;
+          height: 28px;
+          background: url(https://tistory3.daumcdn.net/tistory/2744754/skin/images/icon_item.png)
+            no-repeat;
+          background-size: 500px 500px;
+          background-position: -9px -41px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  font-family: " Roboto ", " Noto", sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: " Roboto ", " Noto", sans-serif;
+}
+
+body {
+  font-family: " Roboto ", " Noto", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.kb-header {
+  padding: 15px 0;
+}
+@media all and (max-width: 1000px) {
+  .kb-header {
+    padding: 25px 0;
+  }
+}
+.kb-header a {
+  display: block;
+}
+.kb-header__inner {
+  display: flex;
+  max-width: 1180px;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner {
+    align-items: center;
+  }
+}
+.kb-header__inner .kb-logo {
+  flex-shrink: 0;
+  margin-top: 37px;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .kb-logo {
+    margin-top: 0;
+  }
+}
+.kb-header__inner .kb-logo img {
+  width: 262px;
+  height: 34px;
+  vertical-align: top;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .kb-logo img {
+    width: 150px;
+    height: 20px;
+  }
+}
+.kb-header__inner .menu-btn {
+  display: none;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .menu-btn {
+    order: -1;
+    display: block;
+    width: 22px;
+    height: 28px;
+  }
+}
+.kb-header__inner .menu-btn .bar {
+  width: 22px;
+  height: 2px;
+  background: #1e1e1e;
+  display: block;
+  margin: 0 auto;
+}
+.kb-header__inner .menu-btn .bar.center {
+  margin: 5px auto;
+}
+.kb-header__inner .kb-nav {
+  width: 625px;
+  font-size: 20px;
+  font-family: "Spoqa Han Sans", "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 28px;
+  color: #1e1e1e;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .kb-nav {
+    width: 22px;
+    height: 28px;
+  }
+}
+.kb-header__inner .kb-nav .link-icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .kb-nav .link-icons {
+    display: none;
+  }
+}
+.kb-header__inner .kb-nav .link-icons a {
+  width: 21px;
+  height: 20px;
+  margin-left: 10px;
+  background: url(https://tistory3.daumcdn.net/tistory/2744754/skin/images/icon_item.png) no-repeat;
+  background-size: 500px 500px;
+}
+.kb-header__inner .kb-nav .link-icons a:nth-child(1) {
+  margin-left: 0;
+  background-position: -32px 0;
+}
+.kb-header__inner .kb-nav .link-icons a:nth-child(2) {
+  background-position: -65px 0;
+}
+.kb-header__inner .kb-nav .link-icons a:nth-child(3) {
+  background-position: -98px 0;
+}
+.kb-header__inner .kb-nav__bottom-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .kb-nav__bottom-box {
+    margin-top: 0;
+  }
+}
+.kb-header__inner .kb-nav__bottom-box .menu {
+  display: flex;
+  width: 590px;
+}
+@media all and (max-width: 1000px) {
+  .kb-header__inner .kb-nav__bottom-box .menu {
+    display: none;
+  }
+}
+.kb-header__inner .kb-nav__bottom-box .menu__item {
+  padding-bottom: 20px;
+  margin-right: 35px;
+}
+.kb-header__inner .kb-nav__bottom-box .search-btn {
+  display: inline;
+  width: 22px;
+  height: 28px;
+  background: url(https://tistory3.daumcdn.net/tistory/2744754/skin/images/icon_item.png) no-repeat;
+  background-size: 500px 500px;
+  background-position: -9px -41px;
+}
+
+/*# sourceMappingURL=main.css.map */

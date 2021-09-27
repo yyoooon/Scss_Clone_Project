@@ -246,14 +246,20 @@ ol {
 }
 
 .nav-wide {
+  flex-shrink: 0;
   display: block;
   width: 240px;
+  height: 100vh;
   padding: 12px 0;
+  overflow-y: scroll;
 }
 @media all and (max-width: 1313px) {
   .nav-wide {
     display: none;
   }
+}
+.nav-wide__inner {
+  height: 850px;
 }
 .nav-wide__section:nth-child(2), .nav-wide__section:nth-child(3) {
   border-top: 1px solid rgba(0, 0, 0, 0.1);

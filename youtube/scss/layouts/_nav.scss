@@ -2,12 +2,18 @@
 @import '../modules/_icon';
 @import '../variables/_color';
 @import '../mixins/_media';
+@import '../variables/_block_height';
 
 $item-height: 40px;
 
 .nav-mini {
+  position: fixed;
+  z-index: 99;
+  top: $header-block-height;
   display: none;
   width: 72px;
+  height: 100vh;
+  background-color: #fff;
   @include media(col_4) {
     display: block;
   }
@@ -42,15 +48,18 @@ $item-height: 40px;
 }
 
 .nav-wide {
-  flex-shrink: 0;
+  position: fixed;
+  z-index: 99;
+  top: $header-block-height;
   display: block;
   width: 240px;
   height: 100vh;
   padding: 12px 0;
+  overflow-y: scroll;
+  background-color: #fff;
   @include media(col_4) {
     display: none;
   }
-  overflow-y: scroll;
 
   &__inner {
     height: 850px;

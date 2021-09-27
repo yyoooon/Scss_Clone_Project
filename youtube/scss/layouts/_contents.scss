@@ -1,10 +1,10 @@
 @import '../modules/_content-item';
 @import '../mixins/_media';
+@import '../variables/_block_height';
 
 .main__content {
-  height: 100vh;
-  padding: 24px 16px;
-  margin: 0 auto;
+  $padding-top: $header-block-height + $fillterbar-block-height + 24px;
+  padding: $padding-top 16px 24px 16px;
   background-color: $--yt-spec-general-background-a;
   .contents {
     display: flex;

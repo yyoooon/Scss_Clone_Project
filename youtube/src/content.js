@@ -42,7 +42,7 @@ function createContent(
   return content;
 }
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 12; i++) {
   const item = createContent();
   contents.appendChild(item);
 }

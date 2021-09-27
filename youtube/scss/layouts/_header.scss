@@ -2,16 +2,19 @@
 @import '../modules/_icon';
 @import '../modules/_button';
 @import '../mixins/_media';
+@import '../variables/_block_height';
 
-$header-block-height: 56px;
 $element-size: 40px;
 $icon-size: 24px;
 
 .ytb-header {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: $header-block-height;
   padding: 0 15px;
+  background-color: #fff;
 
   .icon {
     @include icon;

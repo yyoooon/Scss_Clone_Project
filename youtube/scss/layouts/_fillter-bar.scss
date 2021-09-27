@@ -1,23 +1,24 @@
 @import '../variables/_color';
 @import '../modules/tag';
 @import '../mixins/_media';
-
-$fillter-bar-height: 56px;
+@import '../variables/_block_height';
 
 .content-filter-bar {
+  position: fixed;
+  top: $header-block-height;
+  width: 1184px;
   overflow-x: scroll;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
   }
-
   border-top: 1px solid $--yt-spec-10-percent-layer;
   border-bottom: 1px solid $--yt-spec-10-percent-layer;
+  background-color: #fff;
 
   &__list {
     display: flex;
-    width: 10px;
-    height: $fillter-bar-height;
+    height: $fillterbar-block-height;
     padding-left: 24px;
   }
 

@@ -1,6 +1,54 @@
+@import '../variables/_color';
+@import '../mixins/_media';
+
 @mixin nav-text {
   font-size: 20px;
-  font-family: 'Spoqa Han Sans', 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 28px;
+  color: $text-primary;
+  font-family: 'Spoqa Han Sans', 'Roboto', sans-serif;
+}
+
+@mixin section-title {
+  font-size: 24px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: $text-primary;
+  font-family: 'Spoqa Han Sans', 'Roboto', sans-serif;
+  @include media(md) {
+    font-size: 18px;
+  }
+}
+
+@mixin guide_link-text {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: $text-primary;
+  font-family: 'Spoqa Han Sans', 'Roboto', sans-serif;
+  @include media(md) {
+    font-size: 13px;
+  }
+}
+
+@mixin article-title {
+  font-size: 18px;
+  color: $text-primary;
+  line-height: 1.4em;
+  font-family: 'Spoqa Han Sans', 'Roboto', sans-serif;
+  @include media(md) {
+    font-size: 15px;
+  }
+}
+
+@mixin article-date {
+  font-size: 14px;
+  color: $text-primary;
+  line-height: 1.4em;
+  opacity: 0.6;
+  font-family: 'Spoqa Han Sans', sans-serif;
+  font-weight: 300;
+  @include media(md) {
+    font-size: 12px;
+  }
 }

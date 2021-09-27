@@ -1,3 +1,14 @@
 @import './reset.scss';
 @import './layouts/_header';
 @import './layouts/_ad-slide';
+@import './layouts/_section';
+@import './layouts/_footer';
+@import './mixins/_inner-container';
+
+.site-wrap {
+  padding-top: 122px;
+  @include media(md) {
+    padding-top: 78px;
+  }
+}
+@include inner-container();

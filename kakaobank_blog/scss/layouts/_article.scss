@@ -1,0 +1,41 @@
+@import '../mixins/_typo';
+
+.articles-box {
+  display: flex;
+  a {
+    display: block;
+  }
+  .article {
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+    @include media(sm) {
+      width: 49%;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @include article-title;
+    &__thumbnail {
+      margin-bottom: 25px;
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      @include article-title;
+      margin-bottom: 4px;
+      a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    &__date {
+      @include article-date;
+    }
+  }
+}

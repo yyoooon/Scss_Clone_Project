@@ -1,12 +1,10 @@
 @import '../mixins/_typo';
 @import '../variables/_color';
 @import '../mixins/_media';
-@import '../mixins/_wrap-container';
 
 .ad-slide {
   margin-bottom: 25px;
-  &__inner {
-    @include wrap-container;
+  .inner-container {
     @include media(md) {
       width: 100%;
       padding: 0;

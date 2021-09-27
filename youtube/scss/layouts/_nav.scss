@@ -20,6 +20,7 @@ $item-height: 40px;
   @include media(col_2) {
     display: none;
   }
+
   &__list {
     margin-top: 4px;
   }

@@ -470,11 +470,6 @@ ol {
 }
 @media all and (max-width: 1313px) {
   .ytb-content main {
-    padding-left: 72px;
-  }
-}
-@media all and (max-width: 871px) {
-  .ytb-content main {
     padding-left: 0;
   }
 }

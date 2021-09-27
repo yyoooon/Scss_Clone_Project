@@ -3,6 +3,7 @@
 @import './layouts/_nav';
 @import './layouts/_fillter-bar';
 @import './layouts/_contents';
+@import './mixins/_media';
 
 .ytb-content {
   main {
@@ -10,6 +11,9 @@
     padding-left: 240px;
     @include media(col_4) {
       padding-left: 72px;
+    }
+    @include media(col_2) {
+      padding-left: 0;
     }
   }
 }

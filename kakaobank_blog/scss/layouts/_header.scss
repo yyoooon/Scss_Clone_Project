@@ -1,6 +1,7 @@
 @import '../mixins/_typo';
 @import '../variables/_color';
 @import '../mixins/_media';
+@import '../mixins/_wrap-container';
 
 .kb-header {
   padding: 15px 0;
@@ -12,11 +13,9 @@
   }
 
   &__inner {
+    @include wrap-container;
     display: flex;
-    max-width: 1180px;
     justify-content: space-between;
-    padding: 0 40px;
-    margin: 0 auto;
     @include media(md) {
       align-items: center;
     }

@@ -1,0 +1,23 @@
+@import '../mixins/_typo';
+@import '../variables/_color';
+@import '../mixins/_media';
+@import '../mixins/_wrap-container';
+
+.ad-slide {
+  margin-bottom: 25px;
+  &__inner {
+    @include wrap-container;
+    @include media(md) {
+      width: 100%;
+      padding: 0;
+    }
+    .slider__item {
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -62,11 +62,11 @@ ol {
   display: block;
 }
 .kb-header__inner {
-  display: flex;
   max-width: 1180px;
-  justify-content: space-between;
-  padding: 0 40px;
   margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
 @media all and (max-width: 1000px) {
   .kb-header__inner {
@@ -185,6 +185,27 @@ ol {
   background: url(https://tistory3.daumcdn.net/tistory/2744754/skin/images/icon_item.png) no-repeat;
   background-size: 500px 500px;
   background-position: -9px -41px;
+}
+
+.ad-slide {
+  margin-bottom: 25px;
+}
+.ad-slide__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media all and (max-width: 1000px) {
+  .ad-slide__inner {
+    width: 100%;
+    padding: 0;
+  }
+}
+.ad-slide__inner .slider__item a {
+  display: block;
+}
+.ad-slide__inner .slider__item a img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

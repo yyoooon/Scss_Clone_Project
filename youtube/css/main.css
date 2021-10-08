@@ -203,7 +203,7 @@ ol {
   border-radius: 50%;
 }
 
-.nav-mini {
+.ytb-aside--mini {
   position: fixed;
   z-index: 99;
   top: 56px;
@@ -213,38 +213,32 @@ ol {
   background-color: #fff;
 }
 @media all and (max-width: 1313px) {
-  .nav-mini {
+  .ytb-aside--mini {
     display: block;
   }
 }
 @media all and (max-width: 871px) {
-  .nav-mini {
+  .ytb-aside--mini {
     display: none;
   }
 }
-.nav-mini__list {
+.ytb-aside--mini .aside__list {
   margin-top: 4px;
 }
-.nav-mini__item {
+.ytb-aside--mini .aside__list .aside__item {
   font-family: " Roboto ", " Arial", sans-serif;
   font-size: 10px;
   line-height: 14px;
   font-weight: 400;
   color: #030303;
 }
-.nav-mini__item:hover {
+.ytb-aside--mini .aside__list .aside__item:hover {
   background-color: #f0f0f0;
 }
-.nav-mini__item:active {
+.ytb-aside--mini .aside__list .aside__item:active {
   background-color: #aaa;
 }
-.nav-mini__item .icon {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-bottom: 6px;
-}
-.nav-mini__item a {
+.ytb-aside--mini .aside__list .aside__item a {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -252,8 +246,13 @@ ol {
   height: 74px;
   padding: 16px 0 14px 0;
 }
-
-.nav-wide {
+.ytb-aside--mini .aside__list .aside__item a .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 6px;
+}
+.ytb-aside--wide {
   position: fixed;
   z-index: 99;
   top: 56px;
@@ -265,19 +264,20 @@ ol {
   background-color: #fff;
 }
 @media all and (max-width: 1313px) {
-  .nav-wide {
+  .ytb-aside--wide {
     display: none;
   }
 }
-.nav-wide__inner {
+.ytb-aside--wide .aside__inner {
   height: 850px;
 }
-.nav-wide__section:nth-child(2), .nav-wide__section:nth-child(3) {
+.ytb-aside--wide .aside__inner .aside__section:nth-child(2),
+.ytb-aside--wide .aside__inner .aside__section:nth-child(3) {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 12px;
   padding-top: 12px;
 }
-.nav-wide__item {
+.ytb-aside--wide .aside__inner .aside__item {
   font-family: " Roboto ", " Noto", sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -285,42 +285,43 @@ ol {
   color: #030303;
   font-weight: 400;
 }
-.nav-wide__item:hover {
+.ytb-aside--wide .aside__inner .aside__item:hover {
   background-color: #f0f0f0;
 }
-.nav-wide__item:active {
+.ytb-aside--wide .aside__inner .aside__item:active {
   background-color: #aaa;
   font-weight: 500;
 }
-.nav-wide__item--focus {
+.ytb-aside--wide .aside__inner .aside__item--focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.nav-wide__item--focus:hover {
+.ytb-aside--wide .aside__inner .aside__item--focus:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.nav-wide__item--focus:active {
+.ytb-aside--wide .aside__inner .aside__item--focus:active {
   background-color: #aaa;
 }
-.nav-wide__item a,
-.nav-wide__item button {
+.ytb-aside--wide .aside__inner .aside__item a,
+.ytb-aside--wide .aside__inner .aside__item button {
   display: flex;
   align-items: center;
   height: 40px;
   padding: 0 24px;
 }
-.nav-wide__item button {
+.ytb-aside--wide .aside__inner .aside__item a .icon,
+.ytb-aside--wide .aside__inner .aside__item button .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+.ytb-aside--wide .aside__inner .aside__item button {
   width: 100%;
   font-family: " Roboto ", " Noto", sans-serif;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
   color: #030303;
-}
-.nav-wide__item .icon {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-right: 24px;
 }
 
 .content-filter-bar {

@@ -6,108 +6,109 @@
 
 $item-height: 40px;
 
-.nav-mini {
-  position: fixed;
-  z-index: 99;
-  top: $header-block-height;
-  display: none;
-  width: 72px;
-  height: 100vh;
-  background-color: #fff;
-  @include media(col_4) {
+.ytb-aside {
+  &--mini {
+    position: fixed;
+    z-index: 99;
+    top: $header-block-height;
+    display: none;
+    width: 72px;
+    height: 100vh;
+    background-color: #fff;
+    @include media(col_4) {
+      display: block;
+    }
+    @include media(col_2) {
+      display: none;
+    }
+
+    .aside__list {
+      margin-top: 4px;
+      .aside__item {
+        @include nav-mini-text;
+        &:hover {
+          background-color: $--ytd-searchbox-legacy-button-hover-color;
+        }
+        &:active {
+          background-color: $--yt-spec-grey-2;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 74px;
+          padding: 16px 0 14px 0;
+          .icon {
+            @include icon;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  &--wide {
+    position: fixed;
+    z-index: 99;
+    top: $header-block-height;
     display: block;
-  }
-  @include media(col_2) {
-    display: none;
-  }
-
-  &__list {
-    margin-top: 4px;
-  }
-  &__item {
-    @include nav-mini-text;
-    &:hover {
-      background-color: $--ytd-searchbox-legacy-button-hover-color;
-    }
-    &:active {
-      background-color: $--yt-spec-grey-2;
+    width: 240px;
+    height: 100vh;
+    padding: 12px 0;
+    overflow-y: scroll;
+    background-color: #fff;
+    @include media(col_4) {
+      display: none;
     }
 
-    .icon {
-      @include icon;
-      margin-bottom: 6px;
-    }
-    a {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 74px;
-      padding: 16px 0 14px 0;
-    }
-  }
-}
+    .aside__inner {
+      height: 850px;
 
-.nav-wide {
-  position: fixed;
-  z-index: 99;
-  top: $header-block-height;
-  display: block;
-  width: 240px;
-  height: 100vh;
-  padding: 12px 0;
-  overflow-y: scroll;
-  background-color: #fff;
-  @include media(col_4) {
-    display: none;
-  }
-
-  &__inner {
-    height: 850px;
-  }
-
-  &__section:nth-child(2),
-  &__section:nth-child(3) {
-    border-top: 1px solid $--yt-spec-10-percent-layer;
-    margin-top: 12px;
-    padding-top: 12px;
-  }
-
-  &__item {
-    @include nav-text;
-    font-weight: 400;
-    &:hover {
-      background-color: $--ytd-searchbox-legacy-button-hover-color;
-    }
-    &:active {
-      background-color: $--yt-spec-grey-2;
-      font-weight: 500;
-    }
-    &--focus {
-      background-color: $--yt-spec-10-percent-layer;
-      &:hover {
-        background-color: $--yt-spec-10-percent-layer;
+      .aside__section:nth-child(2),
+      .aside__section:nth-child(3) {
+        border-top: 1px solid $--yt-spec-10-percent-layer;
+        margin-top: 12px;
+        padding-top: 12px;
       }
-      &:active {
-        background-color: $--yt-spec-grey-2;
+
+      .aside__item {
+        @include nav-text;
+        font-weight: 400;
+        &:hover {
+          background-color: $--ytd-searchbox-legacy-button-hover-color;
+        }
+        &:active {
+          background-color: $--yt-spec-grey-2;
+          font-weight: 500;
+        }
+        &--focus {
+          background-color: $--yt-spec-10-percent-layer;
+          &:hover {
+            background-color: $--yt-spec-10-percent-layer;
+          }
+          &:active {
+            background-color: $--yt-spec-grey-2;
+          }
+        }
+
+        a,
+        button {
+          display: flex;
+          align-items: center;
+          height: $item-height;
+          padding: 0 24px;
+          .icon {
+            @include icon;
+            margin-right: 24px;
+          }
+        }
+        button {
+          width: 100%;
+          @include nav-text;
+        }
       }
-    }
-
-    a,
-    button {
-      display: flex;
-      align-items: center;
-      height: $item-height;
-      padding: 0 24px;
-    }
-    button {
-      width: 100%;
-      @include nav-text;
-    }
-
-    .icon {
-      @include icon;
-      margin-right: 24px;
     }
   }
 }

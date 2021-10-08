@@ -9,6 +9,9 @@
   border-radius: 16px;
   border: 1px solid $--yt-spec-10-percent-layer;
   background-color: $--yt-spec-badge-chip-background;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   @include tag-text;
   &:hover {
     background-color: $--yt-spec-button-chip-background-hover;
@@ -19,10 +22,5 @@
     &:hover {
       background-color: $--yt-spec-text-primary;
     }
-  }
-  h3 {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
   }
 }

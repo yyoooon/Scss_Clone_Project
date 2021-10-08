@@ -360,6 +360,9 @@ ol {
   letter-spacing: 0.2px;
   font-weight: 500;
   color: #030303;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .content-filter-bar .keyword-tag:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -370,11 +373,6 @@ ol {
 }
 .content-filter-bar .keyword-tag--focus:hover {
   background-color: #030303;
-}
-.content-filter-bar .keyword-tag h3 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .content-item {

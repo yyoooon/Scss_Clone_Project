@@ -1,17 +1,21 @@
 @import '../variables/_color';
-@import '../modules/tag';
+@import '../modules/_keyword-tag';
 @import '../mixins/_media';
 @import '../variables/_block_height';
 
 .content-filter-bar {
   position: fixed;
   top: $header-block-height;
-  width: 1184px;
+  width: calc(100% - 240px);
+  @include media(col_4) {
+    width: calc(100% - 72px);
+  }
   overflow-x: scroll;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
   }
+  padding: 0 24px;
   border-top: 1px solid $--yt-spec-10-percent-layer;
   border-bottom: 1px solid $--yt-spec-10-percent-layer;
   background-color: #fff;
@@ -19,7 +23,6 @@
   &__list {
     display: flex;
     height: $fillterbar-block-height;
-    padding-left: 24px;
   }
 
   &__item {

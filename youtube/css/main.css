@@ -327,12 +327,18 @@ ol {
 .content-filter-bar {
   position: fixed;
   top: 56px;
-  width: 1184px;
+  width: calc(100% - 240px);
   overflow-x: scroll;
   -ms-overflow-style: none;
+  padding: 0 24px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+@media all and (max-width: 1313px) {
+  .content-filter-bar {
+    width: calc(100% - 72px);
+  }
 }
 .content-filter-bar::-webkit-scrollbar {
   display: none;
@@ -340,7 +346,6 @@ ol {
 .content-filter-bar__list {
   display: flex;
   height: 56px;
-  padding-left: 24px;
 }
 .content-filter-bar__item {
   margin: 12px;
@@ -354,15 +359,15 @@ ol {
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.05);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-family: " Roboto ", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
   font-weight: 500;
   color: #030303;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .content-filter-bar .keyword-tag:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -432,8 +437,6 @@ ol {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
 }
 .content-item__info {
   font-family: " Roboto ", "Arial", sans-serif;
